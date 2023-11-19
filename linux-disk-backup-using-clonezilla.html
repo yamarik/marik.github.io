@@ -54,26 +54,24 @@
  
 
 <meta name="author" content="Olga Maraeva" />
-<meta name="description" content="I just start a new fresh blog using Pelican. Sometimes choosing a theme for a new site is something difficult that takes time. In the Pelican theme gallery, I couldn&#39;t find anything that I really liked to feet all my needs. So in the first time of the history, I …" />
-<meta name="keywords" content="pelican, python, theme">
+<meta name="description" content="From this tutorial you will learn step by step how to use clonezilla to back up your hard drive. Create clonezilla bootable usb The best way is to boot clonezilla with ventoy. With ventoy you can create one! bootable USB drive for all! ISO files you want to boot from …" />
+<meta name="keywords" content="linux">
 
 
   <meta property="og:site_name" content="Programming Blog"/>
-  <meta property="og:title" content="Flex: Responsive Pelican theme"/>
-  <meta property="og:description" content="I just start a new fresh blog using Pelican. Sometimes choosing a theme for a new site is something difficult that takes time. In the Pelican theme gallery, I couldn&#39;t find anything that I really liked to feet all my needs. So in the first time of the history, I …"/>
+  <meta property="og:title" content="How to Clone or Backup Linux Disk Using Clonezilla"/>
+  <meta property="og:description" content="From this tutorial you will learn step by step how to use clonezilla to back up your hard drive. Create clonezilla bootable usb The best way is to boot clonezilla with ventoy. With ventoy you can create one! bootable USB drive for all! ISO files you want to boot from …"/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:url" content="http://localhost:8000/flex-pelican-theme.html"/>
+  <meta property="og:url" content="http://localhost:8000/linux-disk-backup-using-clonezilla.html"/>
   <meta property="og:type" content="article"/>
-  <meta property="article:published_time" content="2015-07-22 08:00:00-04:00"/>
-  <meta property="article:modified_time" content="2015-07-22 08:00:00-04:00"/>
+  <meta property="article:published_time" content="2023-11-19 19:30:00-05:00"/>
+  <meta property="article:modified_time" content="2023-11-19 19:30:00-05:00"/>
   <meta property="article:author" content="http://localhost:8000/author/olga-maraeva.html">
-  <meta property="article:section" content="News"/>
-  <meta property="article:tag" content="pelican"/>
-  <meta property="article:tag" content="python"/>
-  <meta property="article:tag" content="theme"/>
-  <meta property="og:image" content="http://localhost:8000/images/flex-screenshot.png">
+  <meta property="article:section" content="Linux"/>
+  <meta property="article:tag" content="linux"/>
+  <meta property="og:image" content="">
 
-  <title>Programming Blog &ndash; Flex: Responsive Pelican theme</title>
+  <title>Programming Blog &ndash; How to Clone or Backup Linux Disk Using Clonezilla</title>
 
 
 </head>
@@ -147,106 +145,64 @@
 <article class="single">
   <header>
       
-    <h1 id="flex-pelican-theme">Flex: Responsive Pelican theme</h1>
+    <h1 id="linux-disk-backup-using-clonezilla">How to Clone or Backup Linux Disk Using Clonezilla</h1>
     <p>
-      Posted on July 22, 2015 in <a href="http://localhost:8000/category/news.html">News</a>
+      Posted on November 19, 2023 in <a href="http://localhost:8000/category/linux.html">Linux</a>
 
     </p>
   </header>
 
 
   <div>
-    <p>I just start a new fresh blog using <a href="http://getpelican.com">Pelican</a>. Sometimes choosing a theme for a new site is something difficult that takes time.</p>
-<p>In the Pelican <a href="http://www.pelicanthemes.com/">theme gallery</a>, I couldn't find anything that I really liked to feet all my needs. So in the first time of the history, I choose to create my own theme. I never did this before.</p>
-<p>Creating a theme for Pelican is quite easy, unlike Wordpress. You can take a look in the <a href="https://github.com/alexandrevicenzi/Flex">Source Code of Flex</a>.</p>
-<p>But how Flex looks like? Well, you can see <a href="images/flex-screenshot.png">this screenshot</a>, but you already know how it looks like, you're looking at it. :D</p>
-<p>I really care about SEO and integrations with Facebook, Google Plus and other social networks, so this theme offers some features:</p>
+    <p>From this tutorial you will learn step by step how to use clonezilla to back up your hard drive.</p>
+<h3>Create clonezilla bootable usb</h3>
+<p>The best way is to boot clonezilla with ventoy.  With ventoy you can create one! bootable USB drive for all! ISO files you want to boot from.</p>
+<p>You need download ventoy tool. Open <a href="https://www.ventoy.net/en/download.html">ventoy download page</a> and navigate to the latest version. For now it’s <strong>ventoy-1.0.96-linux.tar.gz</strong>.</p>
+<p>To extract the contents of the Ventoy archive open terminal window and enter:</p>
+<div class="highlight"><pre><span></span><code><span class="n">cd</span><span class="w"> </span><span class="n">Downloads</span>
+<span class="n">tar</span><span class="w"> </span><span class="n">xvf</span><span class="w"> </span><span class="n">ventoy</span><span class="o">-</span><span class="mf">1.0</span><span class="o">.</span><span class="mi">96</span><span class="o">-</span><span class="n">linux</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+</code></pre></div>
+
+<p>Navigate to programm’s folder and run ventoy:</p>
+<div class="highlight"><pre><span></span><code>cd ventoy-1.0.96/
+./VentoyGUI.x86_64
+</code></pre></div>
+
+<h4>Install ventoy on flash</h4>
+<p>When the Ventoy GUI application is opened and ready to use, plug your USB flash drive into the computer. The Ventoy GUI tool should then auto-detect your USB flash drive. If no use refresh button. When you will see your usb in the ventoy programm window  click on “Install” button. Agree with partitioning your USB flash and Ventoy will install itself on USB flash drive with secure boot support.</p>
+<p>From now you can copy all .iso file on this usb named “ventoy”, including clonezilla.</p>
+<h3>Use clonezilla</h3>
+<ol>
+<li>
+<p>Start you computer and press f9 button.(for your computer boot menu can be opened by different button).</p>
+</li>
+<li>
+<p>In boot menu select “boot from usb (uefi or bios). I prefer uefi. </p>
+</li>
+<li>
+<p>In ventoy boot menu select clonezilla. Start programm and wait.</p>
+</li>
+</ol>
+<h3>Normal use and troubleshooting.</h3>
+<p>In normal situation you should use clonezilla in “beginner mode” with z9p compression (if your computer is multicore. I think it is). The rest options you can live default. </p>
+<p>But if your SSD or hard disk is corrupted clonezilla usage can be a bit tricky. </p>
+<h4>Clonezilla image is not compressed</h4>
+<p>To check if clonezilla really use compression for you try to save small partition (for example, MBR, sda1). For that select “saveparts” (instead of “savedisk”) and select sda1 (small partition). If clonezilla image of sda1 is compressed it means that you have problems in other blocks.</p>
+<p>Check if empty part of cloning SSD or hard disk disk is actually empty with zerofree programm (zerofree -n). If no you should fill empty part by nulls with zerofree to force  clonezilla use compress methods for whole disk. </p>
+<p>Check if SSD or hard disk have corrupted parts with badblocks programm. In Debian badblocks is located in e2fsprogs package. In case your cloning disk have bad blocks you should select advanced mode in clonezilla (instead of beginner).</p>
+<p>In advanced mode select extra options:</p>
 <ul>
-<li>Mobile First</li>
-<li>Responsive</li>
-<li>Semantic</li>
-<li>SEO Best Practices</li>
-<li>Open Graph</li>
-<li>Rich Snippets (JSON-LD)</li>
+<li>c</li>
+<li>j2</li>
+<li>ntfs -ok</li>
+<li>rescue</li>
+<li>q2 (partclone)</li>
 </ul>
-<p>Maybe these features are not fully optimized, but I'll improve.</p>
-<p>Flex also offers integrations with multiple services.</p>
-<blockquote>
-<p><strong>Tip:</strong></p>
-<p>You can easyly integrate with:</p>
-<ul>
-<li>AddThis</li>
-<li>Disqus</li>
-<li>Google Analytics</li>
-<li>Google Tag Manager</li>
-<li>StatusCake</li>
-</ul>
-</blockquote>
-<p>Flex is a theme built by a developer for developers, but of course, you can use for any purpose. In this scenario, Flex is able to create good styles for coding, outputs and samples.</p>
-<p>If you need to show some program output you can use <code>samp</code> tag to look like this:</p>
-<p><samp>Done: Processed 4 articles, 0 drafts, 2 pages and 0 hidden pages in 0.22 seconds.</samp></p>
-<p>Or if you want multiple lines:</p>
-<p><samp>
-             total       used       free     shared    buffers     cached
-Mem:          5866       4674       1192        386          0       2404
--/+ buffers/cache:       2269       3596
-Swap:        20480       1267      19213
-</samp></p>
-<p>If you like to share code snippets, you can take advantage of <a href="http://pygments.org/">Pygments</a> syntax highlighting:</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// Foo</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">bar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Foo</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bar</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">bar</span> <span class="o">=</span> <span class="n">bar</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>ls<span class="w"> </span>*.jpg<span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>-n1<span class="w"> </span>-i<span class="w"> </span>cp<span class="w"> </span><span class="o">{}</span><span class="w"> </span>/external-hard-drive/directory
-</code></pre></div>
-
-<p><strong>Note:</strong> The code block looks like GitHub’s colors.</p>
-<p>You can add tables too:</p>
-<table>
-<thead>
-<tr>
-<th>Item</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Computer</td>
-<td>$1600</td>
-</tr>
-<tr>
-<td>Phone</td>
-<td>$12</td>
-</tr>
-<tr>
-<td>Pipe</td>
-<td>$1</td>
-</tr>
-</tbody>
-</table>
-<p>and how heading looks like?</p>
-<h1>This is heading 1</h1>
-<h2>This is heading 2</h2>
-<h3>This is heading 3</h3>
-<h4>This is heading 4</h4>
-<h5>This is heading 5</h5>
-<h6>This is heading 6</h6>
-<p>This examples are in Markdown. I'm not sure how it will look using reStructuredText. Keep in mind that Markdown allows you to add HTML tags. If you can create the same HTML syntax produced by Markdown using reStructuredText it will work.</p>
-<p>You can take a look in the <a href="https://raw.githubusercontent.com/alexandrevicenzi/blog/master/content/News/flex-pelican-theme.md">source code of this page</a> to know how to create rich examples.</p>
-<p>Flex is my first attempt creating themes and there's no IE testing yet. You can check the <a href="https://github.com/alexandrevicenzi/flex">sources here</a>.</p>
-<p>As soon as possible I will add this project to Pelican gallery.</p>
-<p>Drop a comment if you like this theme, or <a href="https://github.com/alexandrevicenzi/Flex/issues">open an issue</a> if you need a feature or found a bug.</p>
+<p>When “rescue” option is selected Clonezilla doesn't stop when it reaches a sector error. It simply ignores or bypasses them. If the option isn't selected, CloneZilla will halt and throw a warning message.</p>
   </div>
   <div class="tag-cloud">
     <p>
-      <a href="http://localhost:8000/tag/pelican.html">pelican</a>
-      <a href="http://localhost:8000/tag/python.html">python</a>
-      <a href="http://localhost:8000/tag/theme.html">theme</a>
+      <a href="http://localhost:8000/tag/linux.html">linux</a>
     </p>
   </div>
 
