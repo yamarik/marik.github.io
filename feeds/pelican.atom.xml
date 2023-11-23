@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Programming Blog - Pelican</title><link href="http://localhost:8000/" rel="alternate"></link><link href="http://localhost:8000/feeds/pelican.atom.xml" rel="self"></link><id>http://localhost:8000/</id><updated>2023-11-20T18:53:00-05:00</updated><subtitle>Programming Blog</subtitle><entry><title>Make a Github Pages blog with Pelican</title><link href="http://localhost:8000/make-github-pages-blog-with-pelican.html" rel="alternate"></link><published>2023-11-20T18:53:00-05:00</published><updated>2023-11-20T18:53:00-05:00</updated><author><name>Olga Maraeva</name></author><id>tag:localhost,2023-11-20:/make-github-pages-blog-with-pelican.html</id><summary type="html">&lt;h3&gt;Install Pelican&lt;/h3&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Programming Blog - Pelican</title><link href="https://yamarik.github.io/" rel="alternate"></link><link href="https://yamarik.github.io/feeds/pelican.atom.xml" rel="self"></link><id>https://yamarik.github.io/</id><updated>2023-11-20T18:53:00-05:00</updated><subtitle>Programming Blog</subtitle><entry><title>Make a Github Pages blog with Pelican</title><link href="https://yamarik.github.io/make-github-pages-blog-with-pelican.html" rel="alternate"></link><published>2023-11-20T18:53:00-05:00</published><updated>2023-11-20T18:53:00-05:00</updated><author><name>Olga Maraeva</name></author><id>tag:yamarik.github.io,2023-11-20:/make-github-pages-blog-with-pelican.html</id><summary type="html">&lt;h3&gt;Install Pelican&lt;/h3&gt;
 &lt;p&gt;In project’s folder:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip install pelican
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -109,8 +109,16 @@ AUTORELOAD_IGNORE_CACHE = True
 
 &lt;p&gt;Let's create static pages in Flex-master/docs/content/pages/ and blog posts in Flex-master/docs/content/articles/ folder. For this task you need install markdown via pip or Sinaptic.&lt;/p&gt;
 &lt;p&gt;You can make changes in Flex-master/templates/partial/ folder if you wish or edit base.html file in template folder.&lt;/p&gt;
-&lt;p&gt;When you are ready to deploy your site for production, you might first re-generate your site with any production-specific settings:  &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;make publish
+&lt;p&gt;When you are ready to deploy your site for production change SITEURL in theme's pelicanconf.py from:  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;SITEURL = &amp;quot;http://localhost:8000&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;to&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;SITEURL = &amp;quot;https://your_site.github.io&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;and run again:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;make devserver
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3&gt;Push site on github&lt;/h3&gt;
@@ -118,7 +126,7 @@ AUTORELOAD_IGNORE_CACHE = True
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git clone https://github.com/yamarik/yamarik.github.io.git
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;In cloned folder (if not exist):&lt;/p&gt;
+&lt;p&gt;In cloned folder:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git init .
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
