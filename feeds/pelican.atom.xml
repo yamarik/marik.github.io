@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Programming Blog</title><link href="http://localhost:8000/" rel="alternate"></link><link href="http://localhost:8000/feeds/all.atom.xml" rel="self"></link><id>http://localhost:8000/</id><updated>2023-11-20T18:53:00-05:00</updated><subtitle>Programming Blog</subtitle><entry><title>Make a Github Pages blog with Pelican</title><link href="http://localhost:8000/make-github-pages-blog-with-pelican.html" rel="alternate"></link><published>2023-11-20T18:53:00-05:00</published><updated>2023-11-20T18:53:00-05:00</updated><author><name>Olga Maraeva</name></author><id>tag:localhost,2023-11-20:/make-github-pages-blog-with-pelican.html</id><summary type="html">&lt;h3&gt;Install Pelican&lt;/h3&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Programming Blog - Pelican</title><link href="http://localhost:8000/" rel="alternate"></link><link href="http://localhost:8000/feeds/pelican.atom.xml" rel="self"></link><id>http://localhost:8000/</id><updated>2023-11-20T18:53:00-05:00</updated><subtitle>Programming Blog</subtitle><entry><title>Make a Github Pages blog with Pelican</title><link href="http://localhost:8000/make-github-pages-blog-with-pelican.html" rel="alternate"></link><published>2023-11-20T18:53:00-05:00</published><updated>2023-11-20T18:53:00-05:00</updated><author><name>Olga Maraeva</name></author><id>tag:localhost,2023-11-20:/make-github-pages-blog-with-pelican.html</id><summary type="html">&lt;h3&gt;Install Pelican&lt;/h3&gt;
 &lt;p&gt;In project’s folder:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip install pelican
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -137,50 +137,4 @@ AUTORELOAD_IGNORE_CACHE = True
 &lt;p&gt;You are all done!&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Note! Since 2022 you need to receive &lt;strong&gt;token instead of login and password&lt;/strong&gt; to push site on github.&lt;/p&gt;
-&lt;/blockquote&gt;</content><category term="Pelican"></category><category term="pelican"></category><category term="linux"></category></entry><entry><title>How to Clone or Backup Linux Disk Using Clonezilla</title><link href="http://localhost:8000/linux-disk-backup-using-clonezilla.html" rel="alternate"></link><published>2023-11-19T19:30:00-05:00</published><updated>2023-11-19T19:30:00-05:00</updated><author><name>Olga Maraeva</name></author><id>tag:localhost,2023-11-19:/linux-disk-backup-using-clonezilla.html</id><summary type="html">&lt;p&gt;From this tutorial you will learn step by step how to use clonezilla to back up your hard drive.&lt;/p&gt;
-&lt;h3&gt;Create clonezilla bootable usb&lt;/h3&gt;
-&lt;p&gt;The best way is to boot clonezilla with ventoy.  With ventoy you can create one! bootable USB drive for all! ISO files you want to boot from …&lt;/p&gt;</summary><content type="html">&lt;p&gt;From this tutorial you will learn step by step how to use clonezilla to back up your hard drive.&lt;/p&gt;
-&lt;h3&gt;Create clonezilla bootable usb&lt;/h3&gt;
-&lt;p&gt;The best way is to boot clonezilla with ventoy.  With ventoy you can create one! bootable USB drive for all! ISO files you want to boot from.&lt;/p&gt;
-&lt;p&gt;You need download ventoy tool. Open &lt;a href="https://www.ventoy.net/en/download.html"&gt;ventoy download page&lt;/a&gt; and navigate to the latest version. For now it’s &lt;strong&gt;ventoy-1.0.96-linux.tar.gz&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;To extract the contents of the Ventoy archive open terminal window and enter:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;cd&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Downloads&lt;/span&gt;
-&lt;span class="n"&gt;tar&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;xvf&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;ventoy&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;1.0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;96&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;linux&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tar&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;gz&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Navigate to programm’s folder and run ventoy:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;cd ventoy-1.0.96/
-./VentoyGUI.x86_64
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h4&gt;Install ventoy on flash&lt;/h4&gt;
-&lt;p&gt;When the Ventoy GUI application is opened and ready to use, plug your USB flash drive into the computer. The Ventoy GUI tool should then auto-detect your USB flash drive. If no use refresh button. When you will see your usb in the ventoy programm window  click on “Install” button. Agree with partitioning your USB flash and Ventoy will install itself on USB flash drive with secure boot support.&lt;/p&gt;
-&lt;p&gt;From now you can copy all .iso file on this usb named “ventoy”, including clonezilla.&lt;/p&gt;
-&lt;h3&gt;Use clonezilla&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Start you computer and press f9 button.(for your computer boot menu can be opened by different button).&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;In boot menu select “boot from usb (uefi or bios). I prefer uefi. &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;In ventoy boot menu select clonezilla. Start programm and wait.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3&gt;Normal use and troubleshooting.&lt;/h3&gt;
-&lt;p&gt;In normal situation you should use clonezilla in “beginner mode” with z9p compression (if your computer is multicore. I think it is). The rest options you can live default. &lt;/p&gt;
-&lt;p&gt;But if your SSD or hard disk is corrupted clonezilla usage can be a bit tricky. &lt;/p&gt;
-&lt;h4&gt;Clonezilla image is not compressed&lt;/h4&gt;
-&lt;p&gt;To check if clonezilla really use compression for you try to save small partition (for example, MBR, sda1). For that select “saveparts” (instead of “savedisk”) and select sda1 (small partition). If clonezilla image of sda1 is compressed it means that you have problems in other blocks.&lt;/p&gt;
-&lt;p&gt;Check if empty part of cloning SSD or hard disk disk is actually empty with zerofree programm (zerofree -n). If no you should fill empty part by nulls with zerofree to force  clonezilla use compress methods for whole disk. &lt;/p&gt;
-&lt;p&gt;Check if SSD or hard disk have corrupted parts with badblocks programm. In Debian badblocks is located in e2fsprogs package. In case your cloning disk have bad blocks you should select advanced mode in clonezilla (instead of beginner).&lt;/p&gt;
-&lt;p&gt;In advanced mode select extra options:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;c&lt;/li&gt;
-&lt;li&gt;j2&lt;/li&gt;
-&lt;li&gt;ntfs -ok&lt;/li&gt;
-&lt;li&gt;rescue&lt;/li&gt;
-&lt;li&gt;q2 (partclone)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;When “rescue” option is selected Clonezilla doesn't stop when it reaches a sector error. It simply ignores or bypasses them. If the option isn't selected, CloneZilla will halt and throw a warning message.&lt;/p&gt;</content><category term="Linux"></category><category term="linux"></category></entry></feed>
+&lt;/blockquote&gt;</content><category term="Pelican"></category><category term="pelican"></category><category term="linux"></category></entry></feed>

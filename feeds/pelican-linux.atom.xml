@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Programming Blog - Pelican Linux</title><link href="http://localhost:8000/" rel="alternate"></link><link href="http://localhost:8000/feeds/pelican-linux.atom.xml" rel="self"></link><id>http://localhost:8000/</id><updated>2023-11-20T18:53:00-05:00</updated><subtitle>Programming Blog</subtitle><entry><title>Make a Github Pages blog with Pelican</title><link href="http://localhost:8000/make-github-pages-blog-with-pelican.html" rel="alternate"></link><published>2023-11-20T18:53:00-05:00</published><updated>2023-11-20T18:53:00-05:00</updated><author><name>Olga Maraeva</name></author><id>tag:localhost,2023-11-20:/make-github-pages-blog-with-pelican.html</id><summary type="html">&lt;h3&gt;Install Pelican&lt;/h3&gt;
+&lt;p&gt;In project’s folder:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip install pelican
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;You can inslall Pelican with Sinaptic package manager (recommended). &lt;/p&gt;
+&lt;p&gt;Create a new folder for your project and open a console in it. Let's create default Simple theme:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pelican-quickstart
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;During the pelican-quickstart process you need to say "yes":&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Do you want to …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;h3&gt;Install Pelican&lt;/h3&gt;
+&lt;p&gt;In project’s folder:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip install pelican
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;You can inslall Pelican with Sinaptic package manager (recommended). &lt;/p&gt;
+&lt;p&gt;Create a new folder for your project and open a console in it. Let's create default Simple theme:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pelican-quickstart
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;During the pelican-quickstart process you need to say "yes":&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Do you want to upload your website using Github Pages? Say “y”&lt;/p&gt;
+&lt;p&gt;Do you want to automate site generation and publication? Say "y"&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If you answered “yes” to second question, a &lt;strong&gt;tasks.py&lt;/strong&gt; and &lt;strong&gt;Makefile&lt;/strong&gt; will be generated in the root of your project. These files  should be customized to fit your particular needs and usage patterns. Using them you can easily view and publish your site.&lt;/p&gt;
+&lt;h3&gt;Creating blog content in Markdown&lt;/h3&gt;
+&lt;p&gt;Open your favorite text editor (in my case vi) and navigate to project's root folder. Let's create the folder for our content: static pages and blog posts.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;mkdir content
+cd content
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Create first post: &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;vi your-first-post.md
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;You can add static pages:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;mkdir pages
+cd pages
+vi about.md
+vi contacts.md
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;All files have metadata:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Title&lt;/strong&gt;: title of your page/post.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Date&lt;/strong&gt;: 2023-02-26&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Category&lt;/strong&gt;: Linux&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Slug&lt;/strong&gt;: your page/post URL.Ex: https://yamarik.github.io/linux-disk-backup-using-clonezilla.html. Here slug is: linux-disk-backup-using-clonezilla  &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;It's time to view our Simple Theme. Navigate to project's root folder and run:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;make devserver
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This step create &lt;strong&gt;OUTPUT&lt;/strong&gt; folder  with  site files in root of your project. This command also tell Pelican to watch for your modifications, instead of manually re-running it every time you want to see your changes. In Linux it simultaneously both auto-regenerate and serve the output at http://127.0.0.1:8000/ or  http://localhost:8000 (depends on your theme settings).&lt;/p&gt;
+&lt;h3&gt;Change default Simple theme&lt;/h3&gt;
+&lt;p&gt;You can: 
+5.1. Clone ALL themes
+For the demo, I wanted to play around a bit with some themes, so I chose to clone the wholepelican-themes repo. You can do so with git clone git@github.com:getpelican/pelican-themes.git in the folder of your choice.
+5.2. Choose your theme
+You may choose your new pelican themes from here http://www.pelicanthemes.com/
+or
+https://github.com/getpelican/pelican-themes&lt;/p&gt;
+&lt;p&gt;I choose Flex theme 
+https://github.com/alexandrevicenzi/Flex
+Downolad theme.zip, unpack it and copy your chosen theme in your project's root folder. Then, in the same folder, run:
+pelican-themes -i {your_theme_name}
+or
+pelican-themes --install {your_theme_name} –verbose&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Verify the installation
+pelican-themes --list –verbose
+It’s the path to your new theme&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Configure blog to use new theme
+For this, just open your pelicanconf.py available in your blog directory and define the path to your new theme by adding the following statement at the end of pelicanconf.py file:
+THEME = '/venv/lib/python3.8/site-packages/pelican/themes/your_theme'
+Your path maybe different (see in 6)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Rebuild and run the site locally
+make html serve
+or
+pelican -t {your_theme_name}
+or 
+pelican content -s pelicanconf.py -t /projects/your-site/themes/your-theme
+It wil generate OUTPUT folder in your project with site pages. 
+Now go to http://127.0.0.1:8000 in your browser to view your blog.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;(After that)&lt;/p&gt;
+&lt;p&gt;You can also tell Pelican to watch for your modifications, instead of manually re-running it every time you want to see your changes. To enable this, run the pelican command with the -r or --autoreload option. On non-Windows environments, this option can also be combined with the -l or --listen option to simultaneously both auto-regenerate and serve the output at http://localhost:8000:
+pelican --autoreload –-listen --ignore-cache
+If you’d prefer to have Pelican automatically regenerate your site every time a change is detected (which is handy when testing locally), use the following command instead:
+make regenerate
+make html
+If you want to use make to generate your site using the settings in pelicanconf.py, run:
+make html
+To serve the generated site so it can be previewed in your browser at http://localhost:8000/:
+make serve
+Normally you would need to run make regenerate and make serve in two separate terminal sessions, but you can run both at once via:
+make devserver
+The above command will simultaneously run Pelican in regeneration mode as well as serve the output at http://localhost:8000. Once you are done testing your changes, you should stop the development server via:
+./develop_server.sh stop
+https://docs.getpelican.com/en/3.6.2/publish.html&lt;/p&gt;
+&lt;p&gt;--ignore-cache
+https://docs.getpelican.com/en/latest/settings.html
+pelican -r --ignore-cache
+13:57:04] WARNING  Found deprecated &lt;code&gt;AUTORELOAD_IGNORE_CACHE&lt;/code&gt; in      log.py:91
+                    settings. Use --ignore-cache instead.                     &lt;br&gt;
+  --- AutoReload Mode: Monitoring &lt;code&gt;content&lt;/code&gt;, &lt;code&gt;theme&lt;/code&gt; and &lt;code&gt;settings&lt;/code&gt; for changes.&lt;/p&gt;
+&lt;p&gt;Pelicanconf.py in main progect folder (not Flex theme)
+LOAD_CONTENT_CACHE = False
+AUTORELOAD_IGNORE_CACHE = True
+В tasks.py убрала false в cache, оставила true
+после этого pelican -r –ignore-cache
+честно показывает&lt;/p&gt;
+&lt;p&gt;pelican --autoreload –-listen –ignore-cache
+Этим пользоваться&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Edit paths
+You will see that most of your themes functionalities not working.
+You need edit paths in your main configurations:
+a. In progects (not theme’s) folder edit Makefile and put correct path to your content. (default path to simple theme). 
+INPUTDIR=$(BASEDIR)/Flex-master/docs/content
+б. In pelicanconf.py comment&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1&gt;PATH = 'content'&lt;/h1&gt;
+&lt;p&gt;at the end of the file put
+PATH = 'Flex-master/docs/content'&lt;/p&gt;
+&lt;p&gt;In main tasks.py
+SETTINGS_FILE_BASE = 'Flex-master/docs/pelicanconf.py'
+In makefile
+INPUTDIR=$(BASEDIR)/Flex-master/docs/content&lt;/p&gt;
+&lt;p&gt;Cite from Pelican Page documentation.
+In your case add about.md file in content/pages folder (create folder pages if not exist) and set article title Title: About Me.
+Menu behaviour can be overridden on base.html from templates folder. 
+https://stackoverflow.com/questions/29026994/how-to-add-a-header-menu-in-pelican&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;push site on github
+kiwi@flower:~$ cd Documents
+kiwi@flower:~/Documents$ git clone https://github.com/yamarik/yamarik.github.io.git
+В клонированной с гитхаба папке в терминале написать git init . ( с точкой через пробел)
+Убедиться, что в yamarik есть папка .git&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;git checkout -b main&lt;/p&gt;
+&lt;p&gt;Copy OUTPUT progect’s folder into cloned folder.  yamarik.github.io
+git add .&lt;/p&gt;
+&lt;p&gt;git commit -m "initial commit"&lt;/p&gt;
+&lt;p&gt;git push --set-upstream https://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@github.com/yamarik/yamarik.github.io.git main&lt;/p&gt;
+&lt;p&gt;или&lt;/p&gt;
+&lt;p&gt;git push https://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@github.com/yamarik/yamarik.github.io.git
+And you are all done!
+Изменения, которые надо вернуть
+Папка extra очистить файлы ads.txt и CNAME
+В Publishcong.py темы убрать его сайт url и поставить мой.
+В Pelicanconf.py вернуть localhost вместо сайта.&lt;/p&gt;
+&lt;p&gt;-------DOCUMENTS
+TOKEN
+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&lt;/p&gt;
+&lt;p&gt;----верное решение
+git push https://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@github.com/yamarik/yamarik.github.io.git&lt;/p&gt;
+&lt;p&gt;------Links how to push site on github
+https://github.com/yamarik/yamarik.github.io
+https://techglimpse.com/git-push-github-token-based-passwordless/&lt;/p&gt;
+&lt;p&gt;https://stackoverflow.com/questions/17659206/git-push-resultshttps://gist.github.com/mindplace/b4b094157d7a3be6afd2c96370d39fad#3-connect-your-local-project-folder-to-your-empty-folderrepository-on-github-in-authentication-failed
+https://www.freecodecamp.org/news/error-src-refspec-master-does-not-match-any-how-to-fix-in-git/
+---неверное решение
+git push https://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@github.com/yamarik/https://github.com/yamarik/yamarik.github.io.git&lt;/p&gt;
+&lt;p&gt;DOCS
+https://docs.getpelican.com/en/stable/themes.html
+https://docs.getpelican.com/en/latest/themes.html
+https://docs.getpelican.com/en/4.8.0/publish.html&lt;/p&gt;
+&lt;p&gt;https://snipcart.com/blog/pelican-blog-tutorial-search-comments#demo
+https://geekyshacklebolt.wordpress.com/2020/08/18/how-to-use-a-custom-pelican-blog-theme/
+https://frankcorso.dev/setting-up-pelican-static-site-generator.html
+https://github.com/getpelican/pelican-themes
+https://github.com/alexandrevicenzi/Flex&lt;/p&gt;
+&lt;p&gt;pelican.plugins.search
+base.html
+f ('tipue_search' in PLUGINS or 'pelican.plugins.tipue_search' in PLUGINS) %}
+sidebar.html&lt;/p&gt;
+&lt;p&gt;patrial/nav.html 
+{% if MAIN_MENU %}
+включить в base.html&lt;/p&gt;
+&lt;p _="%" endif&gt;{% if MAIN_MENU %}&lt;br&gt;
+  {% include "partial/nav.html" %}&lt;/p&gt;
+&lt;p&gt;https://www.seyiobaweya.tech/articles/2020-01-28/customizing-your-site/
+https://appliedcaffeine.org/blog/navbaritems/
+pelican settings&lt;/p&gt;
+&lt;header&gt;
+            &lt;h1&gt;&lt;a href="{{ SITEURL }}"&gt;{{ site.title }}&lt;/a&gt;&lt;/h1&gt;
+            &lt;nav&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;a href="{{ SITEURL }}"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                    {% for category, articles in categories.items() %}
+                        &lt;li&gt;&lt;a href="{{ SITEURL }}/category/{{ category|slug }}"&gt;{{ category }}&lt;/a&gt;&lt;/li&gt;
+                    {% endfor %}
+                &lt;/ul&gt;
+            &lt;/nav&gt;
+        &lt;/header&gt;
+&lt;p&gt;В base.html закомментировала include footer.html
+templates/partial/copyright.html
+удалила отсылку к statuscake.html&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;удалила все в footer (в templates/partial) и вставила новый текст&lt;/p&gt;
+&lt;footer&gt;
+    &lt;div class="my_copy"&gt;
+        &amp;copy; {{ COPYRIGHT_YEAR }} {{ AUTHOR }}
+    &lt;/div&gt;
+&lt;/footer&gt;
+&lt;h2&gt;откомментировала include footer.html В base.html&lt;/h2&gt;
+&lt;p&gt;из Documents/AAAAAAAA/pelican/pelican_test/Flex-master/docs/content/extra/
+удалила контент (не сами файлы):
+CNAME (вел на сайт разработчика темы)
+ads.txt&lt;/p&gt;
+&lt;p&gt;Conclusion
+    • Esc + Ctrl + End – Jump end of file 
+    • Hit Esc + Ctrl + Home : Jump start of file 
+    • Press Esc + gg : Go to top the file 
+    • Esc + G : Go to bottom of the file 
+    • Esc + G + A : Go to bottom of the file and in append text mode. In other words, jump to last line and start writing code/text. 
+    • Hit Esc + A + $ : Go to bottom of the file and end of line. 
+https://www.cyberciti.biz/faq/howto-unix-linux-vi-vim-jump-to-end-of-file/&lt;/p&gt;
+&lt;p&gt;------resize image
+https://imageresizer.com&lt;/p&gt;
+&lt;p&gt;------по-моему свой css надо ставить сюда в pelicanconf.py (проверить еще)
+STATIC_PATHS = ["images", "extra/ads.txt", "extra/CNAME"]&lt;/p&gt;
+&lt;p&gt;--------проявились кнопки
+В pelicanconf.py темы поставила 
+DEFAULT_PAGINATION = 0 (вместо 10)&lt;/p&gt;
+&lt;p&gt;-----------extra css
+https://duncanlock.net/blog/2021/07/24/custom-per-page-css-with-pelican/&lt;/p&gt;</content><category term="Pelican Linux"></category><category term="pelican"></category><category term="linux"></category></entry></feed>

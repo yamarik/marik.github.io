@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Programming Blog - News</title><link href="http://localhost:8000/" rel="alternate"></link><link href="http://localhost:8000/feeds/news.atom.xml" rel="self"></link><id>http://localhost:8000/</id><updated>2022-08-31T08:00:00-04:00</updated><subtitle>Programming Blog</subtitle><entry><title>Flex 2.5.0</title><link href="http://localhost:8000/flex-pelican-theme-update-2-5.html" rel="alternate"></link><published>2022-08-31T08:00:00-04:00</published><updated>2022-08-31T08:00:00-04:00</updated><author><name>Olga Maraeva</name></author><id>tag:localhost,2022-08-31:/flex-pelican-theme-update-2-5.html</id><summary type="html">&lt;p&gt;&lt;a href="https://github.com/alexandrevicenzi/Flex"&gt;Flex theme&lt;/a&gt; 2.5.0 comes with minor fixes and big improvments.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added support for &lt;a href="https://github.com/pelican-plugins/search"&gt;Pelican Search&lt;/a&gt; plugin as &lt;a href="https://github.com/getpelican/pelican-plugins/tree/master/tipue_search"&gt;Tipue Search&lt;/a&gt; is deprecated&lt;ul&gt;
+&lt;li&gt;Tipue Search support will be removed in Flex 3.0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Added support for &lt;a href="https://github.com/pelican-plugins/seo"&gt;SEO&lt;/a&gt; plugin&lt;/li&gt;
+&lt;li&gt;Added support for &lt;a href="https://github.com/pelican-plugins/series"&gt;Series&lt;/a&gt; plugin&lt;/li&gt;
+&lt;li&gt;Added support for &lt;a href="https://clarity.microsoft.com/"&gt;Microsoft Clarity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Added support …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://github.com/alexandrevicenzi/Flex"&gt;Flex theme&lt;/a&gt; 2.5.0 comes with minor fixes and big improvments.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Added support for &lt;a href="https://github.com/pelican-plugins/search"&gt;Pelican Search&lt;/a&gt; plugin as &lt;a href="https://github.com/getpelican/pelican-plugins/tree/master/tipue_search"&gt;Tipue Search&lt;/a&gt; is deprecated&lt;ul&gt;
+&lt;li&gt;Tipue Search support will be removed in Flex 3.0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Added support for &lt;a href="https://github.com/pelican-plugins/seo"&gt;SEO&lt;/a&gt; plugin&lt;/li&gt;
+&lt;li&gt;Added support for &lt;a href="https://github.com/pelican-plugins/series"&gt;Series&lt;/a&gt; plugin&lt;/li&gt;
+&lt;li&gt;Added support for &lt;a href="https://clarity.microsoft.com/"&gt;Microsoft Clarity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Added support for Google Analytics v4&lt;/li&gt;
+&lt;li&gt;Updated translations&lt;/li&gt;
+&lt;li&gt;Improved styles for Table of Contents and Figure with captions, as well other small fixes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For more details check our &lt;a href="https://github.com/alexandrevicenzi/Flex/wiki"&gt;Wiki&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The next Flex version will be 3.0 and it will bring a few changes to the theme structure, introducing a few configuration changes.
+Over the years many features were added to Flex theme and some with not much care.
+Because of this, code cleanup is needed to allow theme maintenance in the future.
+Pelican also changed, and some features present in Flex are now available in Pelican or as new plugins. It's time to review everything done so far.&lt;/p&gt;
+&lt;p&gt;Hope you enjoy this version and stay tuned for Flex 3.0.&lt;/p&gt;</content><category term="News"></category><category term="pelican"></category><category term="python"></category><category term="theme"></category></entry></feed>
